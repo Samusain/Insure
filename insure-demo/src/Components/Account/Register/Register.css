@@ -1,0 +1,36 @@
+.register {
+    background-color: var(--Dark-Violet);
+    min-height: 100vh;
+}
+
+.signup-form {
+    background-color: var(--Very-Light-Gray);
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 2rem 4rem;
+}
+
+.inputbox {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputbox > label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.inputbox > input {
+    font-size: 15px;
+    width: 22rem;
+    padding: 0.8rem;
+    border: 1px solid;
+    border-radius: 7px;
+}

@@ -1,0 +1,138 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--Very-Light-Gray);
+    font-family: 'Karla', sans-serif;
+}
+
+.about > h1 {
+    color: var(--Very-Dark-Violet);
+    font-size: 45px;
+    font-weight: 600;
+    margin-left: 5rem;
+}
+
+.mission {
+    display: flex;
+    margin-top: 2rem;
+    padding: 4rem 5rem;
+    background-color: var(--Dark-Violet);
+    background-image: url(../../images/bg-pattern-intro-left-desktop.svg);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.fadeInLeft {
+    animation-name: fadeInLeft;
+}
+
+.aim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--Very-Light-Gray);
+    visibility: visible;
+    animation-name: fadeInLeft;
+}
+
+.aim h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.aim p {
+    font-size: 15px;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    line-height: 1.5;
+    border-top: 1px solid var(--Dark-Grayish-Violet);
+}
+
+.insured {
+    margin: 6rem 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.be-insured {
+    visibility: visible;
+    animation-name: fadeInLeft;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0rem;
+}
+
+.be-insured h3 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.be-insured	p {
+    color: var(--Dark-Grayish-Violet);
+    border-top: 1px solid var(--Dark-Grayish-Violet);
+    font-size: 15px;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.mission-img {
+    margin-left: 2rem;
+}
+
+@media screen and (max-width: 37.5rem){
+    .about {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about > h1 {
+        font-size: 50px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .mission {
+        padding: 4rem 3rem;
+        background-image: url(../../images/bg-pattern-intro-left-desktop.svg);
+        background-position: left;
+        background-repeat: no-repeat;
+    }
+    
+    .aim h2 {
+        font-size: 35px;
+    }
+    
+    .aim p {
+        font-size: 16px;
+    }
+
+    .insured {
+        margin: 3rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .be-insured {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 0rem;
+    }
+    
+    .be-insured h3 {
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+    .be-insured	p {
+        font-size: 16px;
+    }
+    
+    .mission-img {
+        width: 100%;
+        margin: auto;
+    }
+}

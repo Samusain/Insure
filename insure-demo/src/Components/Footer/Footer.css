@@ -1,0 +1,123 @@
+footer {
+    margin-top: auto;
+    background-image: url(../../images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+:root {
+    --Dark-Violet: hsl(256, 26%, 20%);
+    --Grayish-Blue: hsl(216, 30%, 68%);
+    --Very-Dark-Violet: hsl(270, 9%, 17%);
+    --Dark-Grayish-Violet: hsl(273, 4%, 51%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+.footer-container {
+    margin: 0 5rem 3rem 5rem;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--Grayish-Blue);
+}
+
+.top > a {
+    text-decoration: none;
+}
+
+.top > a > img{
+    width: 75%;
+}
+
+.footer-img img{
+    margin-left: 0.5rem;
+}
+
+.footer-img a:hover{
+    color: var(--Dark-Violet);
+}
+
+.links > ul{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul > li {
+    list-style: none;
+}
+
+.links > ul > li > a{
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Violet);
+}
+
+.links > ul > li > ul {
+    margin-top: 1rem;
+}
+
+.links > ul > li > ul > li {
+    line-height: 1.5;
+}
+
+.links > ul > li > ul > li > a {
+    font-size: 11px;
+    font-weight: 700;
+    color:var(--Dark-Violet);
+}
+
+.links > ul > li > ul > li > a:hover {
+    text-decoration:  1.5px underline;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 37.5rem){
+    .footer-container {
+        margin: 0 3rem 3rem 3rem;
+    }
+    
+    .top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .top > a > img{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-img img{
+        width: 15%;
+        margin-left: 0.5rem;
+    }
+
+    .links > ul{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links > ul > li {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .links > ul > li > a {
+        font-size: 13px;
+    }
+}
