@@ -19,7 +19,7 @@ const Main = () => {
             <p>Get your life insurance coverage easier and faster. We blend our expertise 
             and technology to help you find the plan that's right for you. Ensure you 
             and your loved ones are protected.</p>
-            <a href="/">VIEW THEMES</a>
+            <a href="/theme">VIEW THEMES</a>
           </article>
         </div>
           <img src={Img3} alt="pattern-left" className='pattern-left'/>

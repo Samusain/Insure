@@ -28,7 +28,7 @@ const Header = () => {
                 <li><a href="/blog">BLOG</a></li>
                 <li><a href="/login">ACCOUNT</a></li>
             </ul>
-            <button href='/' className='plans'>VIEW THEMES</button>
+            <a href='/theme' className='plans'>VIEW THEMES</a>
         </nav>
             <div className='menu-box'>
                 {showMenu === false?

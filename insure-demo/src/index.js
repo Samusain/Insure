@@ -6,6 +6,7 @@ import About from './Components/About/About'
 import Blog from './Components/Blog/Blog'
 import Login from './Components/Account/Login/Login'
 import Register from './Components/Account/Register/Register'
+import Theme from './Components/Theme/Theme'
 
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/blog",
     element: <Blog/>
+  },
+  {
+    path: "/theme",
+    element: <Theme/>
   },
   {
     path: "/login",

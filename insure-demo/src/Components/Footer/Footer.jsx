@@ -7,11 +7,6 @@ import Pinterest from '../../images/icon-pinterest.svg'
 import Instagram from '../../images/icon-instagram.svg'
 
 const Footer = () => {
-  // const hoverImg = () => {
-    
-  // }
-  
-
 
   return (
       <footer>
@@ -27,17 +22,17 @@ const Footer = () => {
           </div>
           <div className="links">
             <ul>
-              <li><a href="/">OUR COMPANY</a>
+              <li><a href="/about">OUR COMPANY</a>
                   <ul>
-                    <li><a href='insure/about'>HOW WE WORK</a></li>
-                    <li><a href="/">WHY INSURE?</a></li>
-                    <li><a href="/">VIEW PLANS</a></li>
+                    <li><a href='/about'>HOW WE WORK</a></li>
+                    <li><a href="/about">WHY INSURE?</a></li>
+                    <li><a href="/theme">VIEW THEME</a></li>
                     <li><a href="/">REVIEWS</a></li>
                   </ul>
               </li>
-              <li><a href="/">HELP ME</a>
+              <li><a href="/blog">HELP ME</a>
                   <ul>
-                    <li><a href="/">FAQ</a></li>
+                    <li><a href="/blog">FAQ</a></li>
                     <li><a href="/">TERMS OF USE</a></li>
                     <li><a href="/">PRIVACY POLICY</a></li>
                     <li><a href="/">COOKIES</a></li>
@@ -61,35 +56,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-        /* Our company
-
-  
-  Why Insure?
-  View plans
-  Reviews
-
-  Help me
-
-  FAQ
-  Terms of use
-  Privacy policy
-  Cookies
-
-  Contact
-
-  Sales
-  Support
-  Live chat
-
-  Others
-
-  Careers
-  Press
-  Licenses */
-  /* <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Samolino</a>.
-  </div> */
     
   )
 }

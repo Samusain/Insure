@@ -3,7 +3,7 @@
     min-height: 100vh;
 }
 
-.signup-form {
+#signup-form {
     background-color: var(--Very-Light-Gray);
     width: fit-content;
     display: flex;
@@ -33,4 +33,22 @@
     padding: 0.8rem;
     border: 1px solid;
     border-radius: 7px;
+}
+
+.error{
+    margin: auto;
+    font-size: 13px;
+    font-style: italic;
+    color: red;
+}
+
+@media screen and (max-width: 37.5rem){
+    .register {
+        padding-top: 3rem;
+    }
+
+    .signup-form {
+        margin: 4rem;
+        padding: 2rem 3.5rem;
+    }
 }

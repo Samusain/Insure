@@ -56,6 +56,9 @@
     background-color: var(--Dark-Violet);
     border: 0;
     border-radius: 18px;
+    &:hover {
+        background-color: var(--Dark-Grayish-Violet);
+    }
 }
 
 .signup {
@@ -70,4 +73,27 @@
     font-size: 16px;
     margin-left: 0.5rem;
     letter-spacing: 0px;
+    &:hover {
+        color: var(--Dark-Grayish-Violet);
+    }
+}
+
+@media screen and (max-width: 37.5rem){
+    .login {
+        padding-top: 8rem;
+    }
+
+    .form {
+        margin: 3rem;
+        padding: 2rem 3.5rem;
+    }
+    
+    .form > h1 {
+        text-align: center;
+        margin: auto;
+    }
+    
+    .form > h1 > img {
+        width: 130%;
+    }
 }

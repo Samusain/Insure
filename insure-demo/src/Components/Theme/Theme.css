@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --Lime-Green: hsl(163, 72%, 41%);
+    --Bright-Red: hsl(356, 69%, 56%);
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram1: hsl(37, 97%, 70%);
+    --Instagram2:hsl(329, 70%, 58%);
+    --YouTube: hsl(348, 97%, 39%);
+    /* Light Theme */
+    --White: hsl(0, 0%, 100%);
+    --Very-Pale-Blue: hsl(225, 100%, 98%);
+    --Light-Grayish-Blue: hsl(227, 47%, 96%);
+    --Hover: hsl(230, 22%, 74%);
+    --Dark-Grayish-Blue: hsl(228, 12%, 44%);
+    --Very-Dark-Blue: hsl(230, 17%, 14%);
+
+    /* Dark Theme */
+    /* --Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+--Very-Dark-Blue (BG): hsl(230, 17%, 14%);
+--Very-Dark-Blue (Top BG Pattern): hsl(232, 19%, 15%);
+--Dark-Desaturated-Blue (Card BG): hsl(228, 28%, 20%);
+--Desaturated--Blue (Text): hsl(228, 34%, 66%);
+--White (Text): hsl(0, 0%, 100%); */
+}
+
+.theme {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+.social-top {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.head-title > h1 {
+    font-size: 25px;
+    color: var(--Very-Dark-Blue);
+}
+
+.head-title > p {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.topcontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.follow-fbook, .follow-twit, .follow-ig, .follow-ytube {
+    margin: 1rem;
+    background-color: var(--Light-Grayish-Blue);
+    padding: 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    &:hover {
+        background-color: var(--Hover);
+    }
+}
+
+.follow-fbook p:first-child, .follow-twit p:first-child, .follow-ig p:first-child, .follow-ytube p:first-child {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.follow-fbook{
+    border-top: 3px solid var(--Facebook);
+}
+
+.follow-twit {
+    border-top: 3px solid var(--Twitter);
+}
+
+.follow-ig {
+    border-top: 3px solid var(--Instagram1);
+}
+
+.follow-ytube {
+    border-top: 3px solid var(--YouTube);
+}
+
+.followers {
+    text-align: center;
+    margin: 0.8rem 0;
+}
+
+.followers > h2 {
+    font-size: 40px;
+}
+
+.followers > p {
+    color: var(--Dark-Grayish-Blue);
+    font-size: 10px;
+    letter-spacing: 2.5px;
+}
+
+.green {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--Lime-Green);
+}
+
+.red {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--Bright-Red);
+}
+
+.overview {
+    margin: 2rem;
+}
+
+.overview h3{
+    color: var(--Dark-Grayish-Blue);
+    font-size: 25px;
+}
+
+.firstbox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.overview-box {
+    background-color: var(--Light-Grayish-Blue);
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 23%;
+    &:hover {
+        background-color: var(--Hover);
+    }
+}
+
+.fbook {
+    width: 50%;
+    margin-left: 0.5rem;
+}
+
+.ig {
+    margin-left: 1rem;
+    width: 35%;
+}
+
+.twitter {
+    width: 50%;
+    margin-left: 1rem;
+}
+
+.ytube {
+    width: 80%;
+    margin-left: 0.5rem;
+}
+
+.detail, .numbers {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail > p {
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.detail > h4 {
+    font-size: 23px;
+}
+
+.numbers > p {
+    margin-top: 1.8rem;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width:37.5rem){
+    .head {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .head-title > h1 {
+        font-size: 26px;
+    }
+
+    .head-title > p {
+        font-size: 16px;
+    }
+
+    .topcontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-top {
+        margin: 2rem 0 0 0;
+    }
+    
+    .follow-fbook, .follow-twit, .follow-ig, .follow-ytube {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .overview {
+        margin: 0 0 4rem 0;
+    }
+
+    .overview h3{
+        /* margin-left: 5rem; */
+        font-size: 20px;
+    }
+
+    .firstbox {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .overview-box {
+        margin-top: 1.5rem;
+        padding: 0.8rem 1rem;
+        width: 100%;
+    }
+}
