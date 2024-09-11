@@ -78,6 +78,13 @@
     }
 }
 
+.error{
+    margin: auto;
+    font-size: 13px;
+    font-style: italic;
+    color: red;
+}
+
 @media screen and (max-width: 37.5rem){
     .login {
         padding-top: 8rem;

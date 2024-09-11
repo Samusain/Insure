@@ -18,7 +18,8 @@ const Register = () => {
     const handleChanges = (e) => {
         setValues( prevState => ({
           ...prevState, [e.target.name]: e.target.value
-        }))
+        }));
+        setErrors({});
     }
 
     const validate = (values) => {
@@ -62,10 +63,12 @@ const Register = () => {
       const handleSubmit = (e) => {
         e.preventDefault();
         const errors = validate(values);
-        if(Object.keys(errors).length > 0){
-            setErrors(errors);
+        setErrors(errors)
+        if(Object.keys(errors).length === 0){
+            e.target.submit();
         }
       }
+
 
 
   return (
@@ -138,9 +141,9 @@ const Register = () => {
                 <span className='error'>{errors.confirm}</span>
             </div>
         </div>
-            <button className='login-btn' href='/login'>Sign Up</button>
+            <button className='login-btn' type='submit'>Sign Up</button>
         </form>
-        <p className='signup'>Already have an account?<a href="/login">Login</a></p>
+        <p className='signup'>Already have an account?<a >Login</a></p>
     </div>
   )
 }
