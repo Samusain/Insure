@@ -62,7 +62,7 @@ const Login = () => {
           />
           <span className='error'>{errors.firstname}</span>
         </div>
-        <button type='submit' className='login-btn'>Login</button>
+        <button type='submit' className='login-btn' onChange={handleChanges}>Login</button>
       </form>
       <p className='signup'>Don't have an account?<a href="/register"> Sign Up</a></p>
     </div>

@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Register.css'
 import Img1 from '../../../images/logo.svg'
 import { useState } from 'react'
+import Toaster from '../../Notification/Toaster/Toaster';
+
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+const passwordRegex = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}/
 
 const Register = () => {
+
+
     const [values, setValues] = useState({
         firstname: '',
         lastname: '',
         address: '',
         email: '',
         password: '',
-        confirm: '',
+        confirm: ''
     })
 
     const [errors, setErrors] = useState({})
+
+    const [success, setSuccess] = useState('')
 
     const handleChanges = (e) => {
         setValues( prevState => ({
@@ -38,13 +46,13 @@ const Register = () => {
     
       if (!values.email) {
         errors.email = 'This field is required';
-      } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(values.email)) {
+      } else if (!emailRegex.test(values.email)) {
         errors.email = 'Invalid email address';
       }
 
       if (!values.password) {
         errors.password = 'This field is required'
-      } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}/.test(values.password)) {
+      } else if (!passwordRegex.test(values.password)) {
         errors.password = 'Password is not strong enough'
       } else if(values.password.length < 8){
         errors.password = 'Password must be at least 8 characters long'
@@ -54,20 +62,35 @@ const Register = () => {
         errors.confirm = 'This field is required';
       } else if(values.confirm !== values.password){
         errors.confirm = 'Password does not match'
-      } else {
-        errors.confirm = '';
-      }
+      } 
+
         return errors;
       }
 
       const handleSubmit = (e) => {
-        e.preventDefault();
-        const errors = validate(values);
-        setErrors(errors)
-        if(Object.keys(errors).length === 0){
-            e.target.submit();
+          e.preventDefault();
+          const errors = validate(values);
+          setErrors(errors)
+          console.log(errors)
+          if(Object.keys(errors).length === 0){
+            // e.target.submit();
+            console.log(values)
+            // localStorage.setItem("myDataArray", JSON.stringify(dataArray));
+            localStorage.setItem("userData",  JSON.stringify(values));
+            setSuccess('Registration successful!')
+          }
         }
-      }
+
+        
+        
+        // localStorage.getItem("lastname");
+        // const navigate = useNavigate()
+
+        // useEffect(() => {
+        //   if (Object.keys(errors).length === 0) {
+        //     navigate('/login');
+        //   }
+        // }, [errors, navigate]);
 
 
 
@@ -140,10 +163,14 @@ const Register = () => {
                 />
                 <span className='error'>{errors.confirm}</span>
             </div>
-        </div>
-            <button className='login-btn' type='submit'>Sign Up</button>
+          </div>
+            <button className='login-btn'>Sign Up</button>
         </form>
-        <p className='signup'>Already have an account?<a >Login</a></p>
+        {success? <Toaster successMsg={success}/> 
+        : 
+        <></>
+        }
+        <p className='signup'>Already have an account?<a href='/login'>Login</a></p>
     </div>
   )
 }

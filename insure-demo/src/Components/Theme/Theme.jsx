@@ -7,8 +7,19 @@ import Img3 from '../../images/images/icon-instagram1.svg'
 import Img4 from '../../images/images/icon-youtube1.svg'
 import Img5 from '../../images/images/icon-up.svg'
 import Img6 from '../../images/images/icon-down.svg'
+import { useState } from 'react'
 
 const Theme = () => {
+
+    // const [theme, setTheme] = useState();
+    // const changeTheme = () => {
+    //     if (theme == "white"){
+    //         console.log('I am dark');
+    //     } else if(theme == "dark"){
+    //         console.log('I am white');
+    //     }
+    // }
+
   return (
     <Mainlayout>
         <div className='theme'>
@@ -18,7 +29,13 @@ const Theme = () => {
                     <h1>Social Media Dashboard</h1>
                     <p>Total Followers: 23,004</p>
                     </article>
-                    <input type="" value="Dark Mode"/>
+                    <div>
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
                 </div>
                 <div className="topcontainer">
                     <div className="follow-fbook">
@@ -55,7 +72,6 @@ const Theme = () => {
                     </div>
                 </div>
             </section>
-
             <section className="overview">
                 <h3>Overview - Today</h3>
                     <div className="firstbox">

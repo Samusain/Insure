@@ -17,18 +17,19 @@
     --Very-Dark-Blue: hsl(230, 17%, 14%);
 
     /* Dark Theme */
-    /* --Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
---Very-Dark-Blue (BG): hsl(230, 17%, 14%);
---Very-Dark-Blue (Top BG Pattern): hsl(232, 19%, 15%);
---Dark-Desaturated-Blue (Card BG): hsl(228, 28%, 20%);
---Desaturated--Blue (Text): hsl(228, 34%, 66%);
---White (Text): hsl(0, 0%, 100%); */
+    --Toggle: linear-gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+    --Very-Dark-Blue /*(BG)*/: hsl(230, 17%, 14%);
+    --Very-Dark-Blue /*(Top BG Pattern)*/: hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue /*(Card BG)*/: hsl(228, 28%, 20%);
+    --Desaturated--Blue /*(Text)*/: hsl(228, 34%, 66%);
+    --White /*(Text)*/: hsl(0, 0%, 100%);
 }
 
 .theme {
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
+    /* background-image: linear-gradient(to top,hsl(228, 28%, 20%), hsl(230, 17%, 14%)); */
 }
 
 .social-top {
@@ -52,6 +53,45 @@
     font-size: 14px;
     font-weight: 700;
     color: var(--Dark-Grayish-Blue);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+  
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 18px;
+    width: 18px;
+    /* top: 0; */
+    left: 0;
+    /* bottom: 0; */
+    background-color: #fff;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+  
+input:checked + .slider {
+    background-color: linear-gradient(to right,hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+}
+  
+input:checked + .slider:before {
+    transform: translateX(20px);
 }
 
 .topcontainer {
