@@ -7,32 +7,30 @@ import Img3 from '../../images/images/icon-instagram1.svg'
 import Img4 from '../../images/images/icon-youtube1.svg'
 import Img5 from '../../images/images/icon-up.svg'
 import Img6 from '../../images/images/icon-down.svg'
-import { useState } from 'react'
+import ToggleState from '../Recoil/ToggleState'
+import { useRecoilState } from 'recoil'
 
 const Theme = () => {
 
-    // const [theme, setTheme] = useState();
-    // const changeTheme = () => {
-    //     if (theme == "white"){
-    //         console.log('I am dark');
-    //     } else if(theme == "dark"){
-    //         console.log('I am white');
-    //     }
-    // }
+    const [theme, setTheme] = useRecoilState(ToggleState) 
 
   return (
     <Mainlayout>
-        <div className='theme'>
-            <section className="social-top">
+        {/* <div className={theme?'class1 class2': 'class1'}></div> */}
+        <div className={theme=== true? "theme dark-theme":'theme'}>
+            <section className='social-top'>
                 <div className="head">
                     <article className="head-title">
                     <h1>Social Media Dashboard</h1>
                     <p>Total Followers: 23,004</p>
                     </article>
                     <div>
-                        <label class="switch">
-                            <input type="checkbox" />
-                            <span class="slider round"></span>
+                        <label className="switch">
+                            <input 
+                            type="checkbox"
+                            onClick={()=>setTheme(!theme)}
+                            />
+                            <span className="slider round"></span>
                         </label>
                     </div>
                     
@@ -110,9 +108,9 @@ const Theme = () => {
                             <p>Profile Views</p>
                             <h4>52k</h4>
                             </article>
-                            <div class="numbers">
+                            <div className="numbers">
                             <img src={Img3} alt="icon-instagram" className="ig"/>
-                            <p class="green"><img src={Img5} alt="icon-up"/>1375%</p>
+                            <p className="green"><img src={Img5} alt="icon-up"/>1375%</p>
                             </div>
                         </div>
                     </div>
@@ -134,7 +132,7 @@ const Theme = () => {
                             </article>
                             <div className="numbers">
                                 <img src={Img2} alt="icon-twitter" className="twitter"/>
-                                <p class="green"><img src={Img5} alt="icon-up"/>553%</p>
+                                <p className="green"><img src={Img5} alt="icon-up"/>553%</p>
                             </div>
                         </div>
                         <div className="overview-box">
@@ -144,7 +142,7 @@ const Theme = () => {
                             </article>
                             <div className="numbers">
                                 <img src={Img4} alt="icon-youtube" className="ytube"/>
-                                <p class="red"><img src={Img6} alt="icon-down"/>19%</p>
+                                <p className="red"><img src={Img6} alt="icon-down"/>19%</p>
                             </div>
                         </div>
                         <div className="overview-box">
@@ -154,7 +152,7 @@ const Theme = () => {
                             </article>
                             <div className="numbers">
                                 <img src={Img4} alt="icon-youtube" className="ytube"/>
-                                <p class="red"><img src={Img6} alt="icon-down"/>12%</p>
+                                <p className="red"><img src={Img6} alt="icon-down"/>12%</p>
                             </div>
                         </div>
                     </div>

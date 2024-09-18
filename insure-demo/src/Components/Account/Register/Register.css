@@ -10,7 +10,6 @@
     flex-direction: column;
     margin: auto;
     align-items: center;
-    justify-content: space-between;
     border-radius: 20px;
     padding: 2rem 4rem;
 }
@@ -33,6 +32,22 @@
     padding: 0.8rem;
     border: 1px solid;
     border-radius: 7px;
+}
+
+.visible-box {
+    border: 1px solid var(--Dark-Violet);
+    border-radius: 5px;
+    width: 22rem;
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    &:active{
+        border: 2px solid var(--Dark-Violet);
+    }
+}
+
+.see {
+    display: block;
 }
 
 .error{

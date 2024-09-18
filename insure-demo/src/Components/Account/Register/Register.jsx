@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Register.css'
 import Img1 from '../../../images/logo.svg'
 import { useState } from 'react'
-import Toaster from '../../Notification/Toaster/Toaster';
+import Toaster from '../../Notification/Toaster/Toaster'
+import { useNavigate } from "react-router-dom"
+import { FaEyeSlash, FaEye } from "react-icons/fa"
 
+const nameRegex = /^[a-zA-Z' -]{2,}$/
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 const passwordRegex = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}/
 
 const Register = () => {
-
 
     const [values, setValues] = useState({
         firstname: '',
@@ -23,6 +25,11 @@ const Register = () => {
 
     const [success, setSuccess] = useState('')
 
+    const [showPassword, setShowPassword] = useState(true)
+    const [showConfirm, setShowConfirm] = useState(true)
+
+    const navigate = useNavigate()
+
     const handleChanges = (e) => {
         setValues( prevState => ({
           ...prevState, [e.target.name]: e.target.value
@@ -34,10 +41,14 @@ const Register = () => {
         const errors = {};
       if (!values.firstname){
         errors.firstname = 'This field is required';
+      } else if (!nameRegex.test(values.firstname)){
+        errors.firstname = 'Invalid name';//Create a strict regex!!
       }
     
       if (!values.lastname){
         errors.lastname = 'This field is required';
+      } else if (!nameRegex.test(values.lastname)){
+        errors.lastname = 'Invalid name';//Create a strict regex!!
       }
     
       if (!values.address){
@@ -68,35 +79,47 @@ const Register = () => {
       }
 
       const handleSubmit = (e) => {
-          e.preventDefault();
-          const errors = validate(values);
+          e.preventDefault()
+          const errors = validate(values)
           setErrors(errors)
-          console.log(errors)
+          
           if(Object.keys(errors).length === 0){
             // e.target.submit();
             console.log(values)
-            // localStorage.setItem("myDataArray", JSON.stringify(dataArray));
             localStorage.setItem("userData",  JSON.stringify(values));
             setSuccess('Registration successful!')
+            setTimeout(() => {
+              navigate("/login");
+            }, 5000);
           }
         }
 
-        
-        
-        // localStorage.getItem("lastname");
-        // const navigate = useNavigate()
+        const visible = () => {
+          const password = document.getElementById('password');
+          if(showPassword){
+              password.classList.remove('see')
+              password.type = 'text'
+          } else {
+              password.classList.add('see');
+              password.type = 'password'
+          }
+        }
 
-        // useEffect(() => {
-        //   if (Object.keys(errors).length === 0) {
-        //     navigate('/login');
-        //   }
-        // }, [errors, navigate]);
-
+        const visibleConfirm = () => {
+          const confirm = document.getElementById('confirm');
+          if(showConfirm){
+              confirm.classList.remove('see')
+              confirm.type = 'text'
+          } else {
+              confirm.classList.add('see');
+              confirm.type = 'password'
+          }
+        }
 
 
   return (
     <div className='register'>
-        <form id='signup-form' onSubmit={handleSubmit}>
+        <form className='form' onSubmit={handleSubmit}>
         <h1><img src={Img1} alt="logo"/></h1>
         <div className=''>
             <div className='inputbox'>
@@ -145,22 +168,54 @@ const Register = () => {
             </div>
             <div className='inputbox'>
                 <label htmlFor="">Password</label>
-                <input 
-                type="password"
-                name='password'
-                value={values.password}
-                onChange={handleChanges}
-                />
+                <div className="visible-box">
+                  <input 
+                  type="password"
+                  name='password'
+                  id='password'
+                  value={values.password}
+                  onChange={handleChanges}
+                  />
+                  <div className='visible'>
+                    {showPassword === true?
+                      <FaEyeSlash className='unsee' onClick={() => {
+                        setShowPassword(!showPassword);
+                        visible()
+                      }}/>
+                      :
+                      <FaEye onClick={() => {
+                          setShowPassword(!showPassword);
+                          visible()
+                      }}/>
+                    }
+                  </div>
+                </div>
                 <span className='error'>{errors.password}</span>
             </div>
             <div className='inputbox'>
                 <label htmlFor="">Confirm Password</label>
-                <input 
-                type="password"
-                name='confirm'
-                value={values.confirm}
-                onChange={handleChanges}
-                />
+                <div className="visible-box">
+                  <input 
+                  type="password"
+                  name='confirm'
+                  id='confirm'
+                  value={values.confirm}
+                  onChange={handleChanges}
+                  />
+                  <div className='visible'>
+                    {showConfirm === true?
+                      <FaEyeSlash className='unsee' onClick={() => {
+                        setShowConfirm(!showConfirm);
+                        visibleConfirm()
+                      }}/>
+                      :
+                      <FaEye onClick={() => {
+                          setShowConfirm(!showConfirm);
+                          visibleConfirm()
+                      }}/>
+                    }
+                  </div>
+                </div>
                 <span className='error'>{errors.confirm}</span>
             </div>
           </div>

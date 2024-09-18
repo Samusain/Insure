@@ -21,6 +21,7 @@ footer {
     justify-content: space-between;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--Grayish-Blue);
+    margin-top: 1rem;
 }
 
 .top > a {

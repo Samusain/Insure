@@ -67,6 +67,7 @@
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .signup > a {
@@ -76,6 +77,29 @@
     &:hover {
         color: var(--Dark-Grayish-Violet);
     }
+}
+
+.visible-box {
+    border: 1px solid var(--Dark-Violet);
+    border-radius: 5px;
+    width: 22rem;
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    &:active{
+        border: 2px solid var(--Dark-Violet);
+    }
+}
+
+.visible-box > input {
+    border: 0;
+    min-width: 15rem;
+    font-size: 15px;
+    outline: none;
+}
+
+.see {
+    display: block;
 }
 
 .error{

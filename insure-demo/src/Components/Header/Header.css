@@ -39,6 +39,9 @@ header {
     letter-spacing: 1px;
     font-size: 13px;
     font-weight: 600;
+    &:active {
+        color: var(--Dark-Violet);
+    }
 }
 
 .menu > ul > li > a:hover {

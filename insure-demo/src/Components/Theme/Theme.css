@@ -17,7 +17,7 @@
     --Very-Dark-Blue: hsl(230, 17%, 14%);
 
     /* Dark Theme */
-    --Toggle: linear-gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+    --Toggle: linear-gradient #378fe6 to #3eda82;
     --Very-Dark-Blue /*(BG)*/: hsl(230, 17%, 14%);
     --Very-Dark-Blue /*(Top BG Pattern)*/: hsl(232, 19%, 15%);
     --Dark-Desaturated-Blue /*(Card BG)*/: hsl(228, 28%, 20%);
@@ -29,13 +29,19 @@
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
-    /* background-image: linear-gradient(to top,hsl(228, 28%, 20%), hsl(230, 17%, 14%)); */
+    width: 98vw;
+}
+
+.white-theme {
+    background-color: var(--white);
+    color: var(--Very-Dark-Blue);
+    transition: 0.5s;
 }
 
 .social-top {
     display: flex;
     flex-direction: column;
-    margin: 2rem;
+    margin: 2rem 5rem;
 }
 
 .head {
@@ -60,6 +66,7 @@
     display: inline-block;
     width: 40px;
     height: 20px;
+    z-index: 40;
 }
   
 .slider {
@@ -68,11 +75,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-image: linear-gradient(#378fe6, #3eda82);
     border-radius: 20px;
-    transition: 0.4s;
+    transition: 0.6s;
 }
-  
+
 .slider:before {
     position: absolute;
     content: '';
@@ -162,7 +169,7 @@ input:checked + .slider:before {
 }
 
 .overview {
-    margin: 2rem;
+    margin: 2rem 5rem;
 }
 
 .overview h3{
@@ -241,7 +248,66 @@ footer {
     color: hsl(228, 45%, 44%); 
 }
 
+.dark-theme {
+    /* Apply dark theme variables to elements */
+    /* width: 98vw; */
+    background-image: linear-gradient(to top, var(--Very-Dark-Blue), var(--Very-Dark-Blue));
+    color: var(--White);
+    transition: 0.5s;
+
+    /* Update text colors */
+    .head-title > h1 {
+        color: var(--Desaturated-Blue);
+    }
+
+    .slider:before {
+        background-color: var(--Dark-Desaturated-Blue);
+    }
+  
+    /* Update social media buttons */
+    .follow-fbook, .follow-twit, .follow-ig, .follow-ytube {
+      background-color: var(--Dark-Desaturated-Blue);
+    }
+    
+    .follow-fbook:hover, .follow-twit:hover, .follow-ig:hover, .follow-ytube:hover {
+      background-color: var(--Hover);
+    }
+  
+    /* Update overview boxes */
+    .overview > h3  {
+        color: var(--White);
+    }
+
+    .overview-box {
+      background-color: var(--Dark-Desaturated-Blue);
+    }
+    .overview-box:hover {
+      background-color: var(--Hover);
+    }
+  
+    /* Update other elements */
+    .followers > h2 {
+      color: var(--Desaturated-Blue);
+    }
+    .followers > p {
+      color: var(--Desaturated-Blue);
+    }
+    .green {
+      color: var(--Lime-Green);
+    }
+    .red {
+      color: var(--Bright-Red);
+    }
+    .attribution a {
+      color: var(--Desaturated-Blue);
+    }
+  }
+
 @media screen and (max-width:37.5rem){
+    .social-top {
+        margin: 2rem 3rem;
+    }
+
     .head {
         flex-direction: column;
         align-items: center;
@@ -255,15 +321,15 @@ footer {
         font-size: 16px;
     }
 
+    .switch {
+        left: 0;
+    }
+
     .topcontainer {
         flex-direction: column;
         align-items: center;
     }
 
-    .social-top {
-        margin: 2rem 0 0 0;
-    }
-    
     .follow-fbook, .follow-twit, .follow-ig, .follow-ytube {
         width: 100%;
         padding: 1rem;
@@ -271,7 +337,7 @@ footer {
     }
 
     .overview {
-        margin: 0 0 4rem 0;
+        margin: 4rem 3rem;
     }
 
     .overview h3{

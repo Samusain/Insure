@@ -7,8 +7,10 @@ import Blog from './Components/Blog/Blog'
 import Login from './Components/Account/Login/Login'
 import Register from './Components/Account/Register/Register'
 import Theme from './Components/Theme/Theme'
-
+import Dashboard from './Components/Dashboard/Dashboard'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
+import { RecoilRoot } from 'recoil';
+import PrivateRouteProfile from './Components/PrivateRouteProfile/PrivateRouteProfile';
 
 const router = createBrowserRouter([
   {
@@ -36,19 +38,29 @@ const router = createBrowserRouter([
     element: <Theme/>
   },
   {
+    path: "/register",
+    element: <Register/>
+  },
+  {
     path: "/login",
     element: <Login/>
   },
   {
-    path: "/register",
-    element: <Register/>
+    path: "/dashboard",
+    element: <PrivateRouteProfile><Dashboard/></PrivateRouteProfile>
   }
+  // {
+  //   path: "/dashboard",
+  //   element: <Dashboard/>
+  // }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RecoilRoot>
+      <RouterProvider router={router} />
+    </RecoilRoot>
   </React.StrictMode>
 );
 
