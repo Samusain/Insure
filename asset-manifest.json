@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/insure/static/css/main.fe6f150b.css",
-    "main.js": "/insure/static/js/main.17a26ae1.js",
+    "main.css": "/insure/static/css/main.d34aa343.css",
+    "main.js": "/insure/static/js/main.673bee94.js",
     "static/media/image-intro-desktop.jpg": "/insure/static/media/image-intro-desktop.2f3429f63753a67e322b.jpg",
     "static/media/connect.jpg": "/insure/static/media/connect.ac7d9695f0db10896569.jpg",
     "static/media/logo.svg": "/insure/static/media/logo.b84080a147fc2d2276186c0349edfeec.svg",
@@ -24,11 +24,11 @@
     "static/media/icon-snappy-process.svg": "/insure/static/media/icon-snappy-process.eea918825472aa9c0993c85ced5522e7.svg",
     "static/media/icon-down.svg": "/insure/static/media/icon-down.0c77426d8f1ab70c4ae629868c263878.svg",
     "static/media/icon-up.svg": "/insure/static/media/icon-up.359200b20d83a37cfb26d6de21236570.svg",
-    "main.fe6f150b.css.map": "/insure/static/css/main.fe6f150b.css.map",
-    "main.17a26ae1.js.map": "/insure/static/js/main.17a26ae1.js.map"
+    "main.d34aa343.css.map": "/insure/static/css/main.d34aa343.css.map",
+    "main.673bee94.js.map": "/insure/static/js/main.673bee94.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe6f150b.css",
-    "static/js/main.17a26ae1.js"
+    "static/css/main.d34aa343.css",
+    "static/js/main.673bee94.js"
   ]
 }
