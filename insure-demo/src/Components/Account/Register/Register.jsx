@@ -120,7 +120,7 @@ const Register = () => {
   return (
     <div className='register'>
         <form className='form' onSubmit={handleSubmit}>
-        <h1><img src={Img1} alt="logo"/></h1>
+        <h1><a href='/'><img src={Img1} alt="logo"/></a></h1>
         <div className=''>
             <div className='inputbox'>
                 <label htmlFor="firstname">Firstname</label>

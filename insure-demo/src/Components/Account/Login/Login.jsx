@@ -85,7 +85,7 @@ const Login = () => {
   return (
     <div className='login'>
       <form className="form" onSubmit={handleSubmit}>
-        <h1><img src={Img1} alt="logo"/></h1>
+        <h1><a href="/"><img src={Img1} alt="logo"/></a></h1>
         <div className='inputbox'>
           <label htmlFor="email">Email</label>
           <input 
