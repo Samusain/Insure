@@ -62,8 +62,19 @@
         padding-top: 3rem;
     }
 
-    .signup-form {
+    .form {
         margin: 4rem;
         padding: 2rem 3.5rem;
     }
+
+    .inputbox > label {
+        font-size: 18px;
+    }
+    
+    .inputbox > input {
+        font-size: 18px;
+        width: 22rem;
+        padding: 1rem;
+    }
+    
 }
