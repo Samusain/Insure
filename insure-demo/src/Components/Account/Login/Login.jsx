@@ -5,7 +5,6 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Toaster from '../../Notification/Toaster/Toaster'
 import { FaEyeSlash, FaEye } from "react-icons/fa"
-// import { FaEye } from "react-icons/fa"
 
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
@@ -22,6 +21,8 @@ const Login = () => {
   
   const [success, setSuccess] = useState('')
   const [err, setErr] = useState('')
+  const [warning, setWarning] = useState('')
+
 
   const [showPassword, setShowPassword] = useState(true)
 
@@ -131,6 +132,11 @@ const Login = () => {
           <Toaster successMsg={success}/>
           :
           <Toaster errorMsg={err}/>
+        }
+        {warning?
+        <Toaster warningMsg={warning}/>
+        :
+        <></>
         }
     </div>
   )
