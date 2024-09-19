@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+# "homepage": "https://samusain.github.io/insure",
+
 # testing
 /coverage
 

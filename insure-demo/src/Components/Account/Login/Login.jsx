@@ -22,6 +22,7 @@ const Login = () => {
   
   const [success, setSuccess] = useState('')
   const [err, setErr] = useState('')
+  const [warning, setWarning] = useState("");
 
   const [showPassword, setShowPassword] = useState(true)
 
@@ -125,15 +126,12 @@ const Login = () => {
         </div>
         <button className='login-btn'>Login</button>
       </form>
-      <p className='signup'>Don't have an account?<a href="/register"> Sign Up</a></p>
+      <p className='signup'>Don't have an account?<a href="/register"> Sign Up</a></p> 
       
-        {success? 
-          <Toaster successMsg={success}/>
-          :
-          <Toaster errorMsg={err}/>
-        }
+      <Toaster successMsg={success} errorMsg={err} warningMsg={warning}/>
     </div>
   )
+  
 }
 
 export default Login
