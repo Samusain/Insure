@@ -12,7 +12,7 @@ import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import { RecoilRoot } from 'recoil';
 import PrivateRouteProfile from './Components/PrivateRouteProfile/PrivateRouteProfile';
 
-const router = createBrowserRouter([
+const router1 = createBrowserRouter([
   {
     path: "/insure",
     element: <App/>
@@ -59,7 +59,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RecoilRoot>
-      <RouterProvider router={router} />
+      <RouterProvider router={router1} />
+      {/* <App/> */}
     </RecoilRoot>
   </React.StrictMode>
 );
