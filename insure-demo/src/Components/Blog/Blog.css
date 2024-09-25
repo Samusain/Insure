@@ -41,7 +41,7 @@ h2 {
     background-color: var(--Dark-Violet);
     transition: 2s;
     &:hover {
-        font-size: large;
+        transform: translateX(3%) translateY(5%);
         box-shadow: 0 0 10px rgb(0, 0, 0);
     }
     
@@ -61,7 +61,7 @@ h2 {
     margin-left: 2rem;
     transition: 2s;
     &:hover {
-        font-size: large;
+        transform: translateX(3%) translateY(5%);
         box-shadow: 0 0 10px rgb(0, 0, 0);
     }
 }

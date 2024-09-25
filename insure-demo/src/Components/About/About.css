@@ -24,17 +24,31 @@
     background-repeat: no-repeat;
 }
 
-.fadeInLeft {
-    animation-name: fadeInLeft;
-}
 
 .aim {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: var(--Very-Light-Gray);
-    visibility: visible;
-    animation-name: fadeInLeft;
+    animation: fadeIn 1s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateX(65%);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(50%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
 .aim h2 {
@@ -57,11 +71,14 @@
 }
 
 .be-insured {
-    visibility: visible;
-    animation-name: fadeInLeft;
     display: flex;
     flex-direction: column;
     margin: 3rem 0rem;
+}
+
+.fade{
+    animation: fadeIn 1s ease-in forwards;
+    opacity: 0;
 }
 
 .be-insured h3 {
@@ -80,6 +97,20 @@
 
 .mission-img {
     margin-left: 2rem;
+    animation: fadeUp 1s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
 }
 
 @media screen and (max-width: 37.5rem){

@@ -16,7 +16,6 @@ const Theme = () => {
 
   return (
     <Mainlayout>
-        {/* <div className={theme?'class1 class2': 'class1'}></div> */}
         <div className={theme=== true? "theme dark-theme":'theme'}>
             <section className='social-top'>
                 <div className="head">

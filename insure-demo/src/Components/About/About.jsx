@@ -2,8 +2,19 @@ import React from 'react'
 import './About.css'
 import Mainlayout from '../Mainlayout/Layout'
 import Img1 from '../../images/connect.jpg'
+import { useState } from 'react'
 
 const About = () => {
+
+  const [transit, setTransit] = useState(false)
+  const fadeIn = () => {
+    if(transit){
+      setTransit(true)
+    } else {
+      setTransit(false)
+    }
+  }
+
   return (
     <Mainlayout>
         <div className='about'>

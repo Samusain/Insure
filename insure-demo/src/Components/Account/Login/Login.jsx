@@ -14,7 +14,6 @@ const Login = () => {
     email: '',
     password: ''
   })
-  console.log(values)
   
   const [errors, setErrors] = useState('');
   console.log(errors);
@@ -55,6 +54,8 @@ const Login = () => {
     setErrors(errors);
     if(Object.keys(errors).length === 0){
       const storedUserData = localStorage.getItem('userData')
+      const userId = Math.random();
+      
       if(storedUserData){
         const userData = JSON.parse(storedUserData)
         if(values.email === userData.email && values.password === userData.password){
@@ -62,6 +63,7 @@ const Login = () => {
           setTimeout(() => {
             navigate("/dashboard");
           }, 3000);
+          localStorage.setItem('sessionId', userId);
         } else {
           setErr('Invalid email or password')
         }

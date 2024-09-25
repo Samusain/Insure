@@ -19,6 +19,10 @@ const Header = () => {
         }
     }
 
+    // const transition = () => {
+
+    // }
+
   return (
     <header>
         <a href="/insure"><img src={Logo} alt="logo" className='logo'/></a>

@@ -1,43 +1,210 @@
 .dashboard {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Dark-Violet);
 }
 
 .logout {
-    width: fit-content;
-    margin-left: 3rem;
-    margin-top: 1.5rem;
-    padding: 0.5rem 1.2rem;
-    color: var(--Dark-Violet);
-    background-color: var(--White);
-    border-radius: 20px;
-    border: 2px solid var(--Dark-Violet);
-    font-size: 15px;
-    font-weight: 600;
+  width: fit-content;
+  margin-left: 3rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.2rem;
+  color: var(--Dark-Violet);
+  background-color: var(--White);
+  border-radius: 20px;
+  border: 2px solid var(--Dark-Violet);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .board {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.board > h1 {
-    margin-top: 3rem;
-    font-size: 50px;
-    color: var(--Dark-Violet);
-    text-align: center;
+.board > h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Dark-Violet);
 }
 
 .begin {
-    width: fit-content;
-    margin-top: 2rem;
-    padding: 0.5rem 1.2rem;
-    color: var(--White);
-    background-color: var(--Dark-Violet);
-    border-radius: 20px;
-    border: 0;
-    font-size: 15px;
+  width: fit-content;
+  margin-top: 2rem;
+  padding: 0.5rem 1.2rem;
+  color: var(--White);
+  background-color: var(--Dark-Violet);
+  border-radius: 20px;
+  border: 0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.stats > h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Dark-Violet);
+}
+
+.stats ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stats li {
+  margin-bottom: 1rem;
+}
+
+.stats span {
+  font-weight: 600;
+  color: var(--Dark-Violet);
+}
+
+.view-more {
+  width: fit-content;
+  padding: 0.5rem 1.2rem;
+  color: var(--White);
+  background-color: var(--Dark-Violet);
+  border-radius: 20px;
+  border: 0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.news > h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Dark-Violet);
+}
+
+.news ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news li {
+  margin-bottom: 1rem;
+}
+
+.news span {
+  font-weight: 600;
+  color: var(--Dark-Violet);
+}
+
+.news p {
+  font-size: 14px;
+  color: var(--Gray);
+  margin-bottom: 0;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.quick-links > h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Dark-Violet);
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li {
+  margin-bottom: 1rem;
+}
+
+.quick-links span {
+  font-weight: 600;
+  color: var(--Dark-Violet);
+}
+
+.featured-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.featured-content > h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--Dark-Violet);
+}
+
+.featured-content ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.featured-content li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.featured-content img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+  border-radius: 10px;
+}
+
+.featured-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--Dark-Violet);
+  margin-bottom: 0.5rem;
+}
+
+.featured-content p {
+  font-size: 14px;
+  color: var(--Gray);
 }
