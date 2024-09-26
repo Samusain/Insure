@@ -4,12 +4,12 @@ import BackgroundModal from '../BackgroundModal/BackgroundModal';
 
 const countdownAtom = atom({
   key: 'countdown',
-  default: 60, // 1 minute
+  default: 14400, // 1 minute
 });
 
 const Logout = () => {
   const [countdown, setCountdown] = useRecoilState(countdownAtom);
-  const [timerRunning, setTimerRunning] = useState(true);
+  const [timerRunning, setTimerRunning] = useState(false);
   console.log(countdown);
 
   useEffect(() => {
@@ -36,13 +36,15 @@ const Logout = () => {
   };
 
   return (
-    <div className='logout-modal'>
+    <div>
       {timerRunning && (
-        <BackgroundModal viState={timerRunning}/>
-        // <h2>Logout Warning</h2>
-        // <p>You will be logged out in {countdown} seconds.</p>
-        // <button onClick={handleCancel}>Cancel</button>
+        <div className='logout-modal'>
+          <h2>Logout Warning</h2>
+          <p>You will be logged out in {countdown} seconds.</p>
+          <button onClick={handleCancel}>Cancel</button>
+        </div>
       )}
+      <BackgroundModal viState={timerRunning}/>
     </div>
   );
 };

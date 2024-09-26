@@ -1,29 +1,10 @@
 .modal{
     display: block;
-    position: absolute;
+    position: fixed;
+    z-index: 100px;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--Dark-Violet);
-    color: var(--Grayish-Blue);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.modal h2 {
-    margin-top: 0;
-}
-
-.modal button {
-    background-color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-  
-.modal button:hover {
-    background-color: #eee;
+    background-color: var(--modal);
 }

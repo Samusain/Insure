@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Toaster from '../../Notification/Toaster/Toaster'
 import { FaEyeSlash, FaEye } from "react-icons/fa"
+import Loading from '../../Load/Loading'
 
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
@@ -59,7 +60,7 @@ const Login = () => {
       if(storedUserData){
         const userData = JSON.parse(storedUserData)
         if(values.email === userData.email && values.password === userData.password){
-          setSuccess('Login successful')
+          setSuccess('Login successful');
           setTimeout(() => {
             navigate("/dashboard");
           }, 3000);
@@ -129,7 +130,13 @@ const Login = () => {
         <button className='login-btn'>Login</button>
       </form>
       <p className='signup'>Don't have an account?<a href="/register"> Sign Up</a></p>
-      
+      <div className='bounce'>
+        {success?
+          <Loading/> 
+            :
+          <Toaster errorMsg={err}/>
+        }
+      </div>
         {success? 
           <Toaster successMsg={success}/>
           :
