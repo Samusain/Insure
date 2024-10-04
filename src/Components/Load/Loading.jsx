@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Loadimg from '../../images/Ball@1x-1.0s-200px-200px.svg'
-import BackgroundModal from '../BackgroundModal/BackgroundModal';
+import LoadImg from '../../images/Ball@1x-1.0s-200px-200px.svg'
+import BackgroundModal from '../BackgroundModal/BackgroundModal'
 
 const Loading = () => {
 
@@ -10,19 +10,22 @@ const Loading = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading('Please wait');
+            setShowImg(false);
         }, 3000)
     }, []);
 
   return (
-    <div className='bounce'>
+    <div>
+      <div className="jumper">
         {
            showImg? (
-            <img src={Loadimg}/>
+            <img src={LoadImg} alt='jumper'/>
            ) : (
             <h3>{loading}</h3>
            )
         }
-        <BackgroundModal viState={showImg}/>
+      </div>
+      <BackgroundModal viState={showImg}/>
     </div>
   )
 }

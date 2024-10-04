@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import Toaster from '../../Notification/Toaster/Toaster'
 import { FaEyeSlash, FaEye } from "react-icons/fa"
 import Loading from '../../Load/Loading'
+// import BackgroundModal from '../../BackgroundModal/BackgroundModal'
 
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
@@ -101,8 +102,6 @@ const Login = () => {
         </div>
         <div className='inputbox'>
           <label htmlFor="password">Password</label>
-          {/* 1)Style the eye icons in login and signup page
-          2) */}
           <div className='visible-box'>
             <input 
             type="password" 
