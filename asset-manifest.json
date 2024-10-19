@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/insure/static/css/main.49c6bedd.css",
-    "main.js": "/insure/static/js/main.c4f71eea.js",
+    "main.css": "/insure/static/css/main.bd4abc24.css",
+    "main.js": "/insure/static/js/main.0b8bcf97.js",
     "static/media/image-intro-desktop.jpg": "/insure/static/media/image-intro-desktop.2f3429f63753a67e322b.jpg",
     "static/media/connect.jpg": "/insure/static/media/connect.ac7d9695f0db10896569.jpg",
     "static/media/logo.svg": "/insure/static/media/logo.b84080a147fc2d2276186c0349edfeec.svg",
@@ -27,7 +27,7 @@
     "static/media/icon-up.svg": "/insure/static/media/icon-up.359200b20d83a37cfb26d6de21236570.svg"
   },
   "entrypoints": [
-    "static/css/main.49c6bedd.css",
-    "static/js/main.c4f71eea.js"
+    "static/css/main.bd4abc24.css",
+    "static/js/main.0b8bcf97.js"
   ]
 }
