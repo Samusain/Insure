@@ -32,7 +32,6 @@ const Theme = () => {
                             <span className="slider round"></span>
                         </label>
                     </div>
-                    
                 </div>
                 <div className="topcontainer">
                     <div className="follow-fbook">

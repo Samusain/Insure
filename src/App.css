@@ -16,6 +16,10 @@
   --modal: hsl(256, 26%, 20%, 0.5);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Karla", sans-serif;
   /* font-weight: 400, 700; */

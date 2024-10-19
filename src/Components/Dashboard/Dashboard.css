@@ -37,6 +37,7 @@ header h1 {
   flex-direction: column;
   align-items: center;
   margin-bottom: 2rem;
+  margin-top: 6rem;
 }
 
 .board > h2 {
@@ -207,4 +208,90 @@ header h1 {
 .featured-content p {
   font-size: 14px;
   color: var(--Gray);
+}
+
+/* Tablet view styles */
+
+@media screen and (max-width: 76.8rem) {
+  /* Adjust dashboard layout */
+  .dashboard {
+    padding: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+
+  .logout {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  /* Adjust board layout */
+  .board {
+    margin-bottom: 1.5rem;
+    margin-top: 6rem;
+  }
+
+  .board > h2 {
+    font-size: 20px;
+  }
+
+  .begin {
+    margin-top: 1.5rem;
+  }
+
+  /* Adjust stats layout */
+  .stats {
+    margin-bottom: 1.5rem;
+  }
+
+  .stats > h2 {
+    font-size: 20px;
+  }
+
+  /* Adjust news layout */
+  .news {
+    margin-bottom: 1.5rem;
+  }
+
+  .news > h2 {
+    font-size: 20px;
+  }
+
+  /* Adjust quick links layout */
+  .quick-links {
+    margin-bottom: 1.5rem;
+  }
+
+  .quick-links > h2 {
+    font-size: 20px;
+  }
+
+  /* Adjust featured content layout */
+  .featured-content {
+    margin-bottom: 1.5rem;
+  }
+
+  .featured-content > h2 {
+    font-size: 20px;
+  }
+
+  .featured-content ul {
+    flex-direction: column;
+  }
+
+  .featured-content li {
+    margin-bottom: 1rem;
+  }
+
+  .featured-content img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .featured-content h3 {
+    font-size: 16px;
+  }
 }

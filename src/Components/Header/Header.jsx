@@ -19,9 +19,6 @@ const Header = () => {
         }
     }
 
-    // const transition = () => {
-
-    // }
 
   return (
     <header>
@@ -46,7 +43,6 @@ const Header = () => {
                         menuDown()
                     }}/>
                 }
-
             </div>
                 
     </header>

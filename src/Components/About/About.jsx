@@ -26,8 +26,8 @@ const About = () => {
               </article>
           </section>
           <section className='insured'>
-              <article className='be-insured'>
-                <h3>We make sure you are Insured</h3>
+              <article className='be-insured' onLoadStart={fadeIn}>
+                <h3>Be sure, you are Insured</h3>
                 <p>Our team of experts will work with you to create a customized plan that meets your
                 unique needs and goals. We'll take care of the details, so you can focus on what
                 matters most. Being insured is more than just a safety net; it's a fundamental part of financial stability and peace of mind. Insure will act as a protective barrier against unforeseen events and potential risks, whether they are health-related, accidents, or property damage. We will provide a cushion that can absorb the financial shock of unexpected incidents, allowing you to focus on recovery and rebuilding rather than the stress of financial strain.</p>
