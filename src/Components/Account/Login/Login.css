@@ -118,111 +118,12 @@
     transform: translate(-50%, -50%);
 }
 
-/* Tablet view styles */
-
-@media screen and (max-width: 76.8rem) {
-    body {
-      font-size: 16px; /* Base font size for readability */
-      line-height: 1.5; /* Improved line spacing */
-    }
-  
-    header {
-      display: flex;
-      justify-content: space-between; /* Space out elements */
-      padding: 1rem; /* Padding around the header */
-      background-color: #f8f8f8; /* Light background for header */
-    }
-  
-    header h1 {
-      font-size: 24px; /* Slightly larger title */
-      margin: 0; /* Remove default margin */
-    }
-  
-    .logout {
-      font-size: 14px; /* Adjust logout button size */
-      padding: 0.5rem 1rem; /* Add padding for touch targets */
-      background-color: #007BFF; /* Primary button color */
-      color: white; /* Text color */
-      border: none; /* Remove border */
-      border-radius: 4px; /* Rounded corners */
-      cursor: pointer; /* Pointer cursor on hover */
-    }
-  
-    .dashboard {
-      display: flex;
-      flex-direction: column; /* Stack items vertically */
-      padding: 2rem; /* Padding around the dashboard */
-    }
-  
-    .board {
-      margin-bottom: 2rem; /* Space between boards */
-      padding: 1rem; /* Padding inside board */
-      background-color: #ffffff; /* White background for boards */
-      border-radius: 8px; /* Rounded corners */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    }
-  
-    .board > h2 {
-      font-size: 20px; /* Heading size */
-      margin-bottom: 1rem; /* Space below heading */
-    }
-  
-    .begin {
-      margin-top: 1rem; /* Space above begin button */
-      padding: 0.75rem 1.5rem; /* Padding for button */
-      background-color: #28a745; /* Success color */
-      color: white; /* Text color */
-      border: none; /* Remove border */
-      border-radius: 4px; /* Rounded corners */
-      cursor: pointer; /* Pointer cursor on hover */
-    }
-  
-    .stats, .news, .quick-links, .featured-content {
-      margin-bottom: 2rem; /* Space between sections */
-    }
-  
-    h2 {
-      font-size: 22px; /* Section heading size */
-      margin-bottom: 1rem; /* Space below section heading */
-    }
-  
-    /* Featured content adjustments */
-    .featured-content ul {
-      display: flex;
-      flex-wrap: wrap; /* Allow items to wrap */
-      justify-content: space-between; /* Space between items */
-    }
-  
-    .featured-content li {
-      flex: 1 1 calc(50% - 1rem); /* Two items per row with spacing */
-      margin-bottom: 1rem; /* Space below items */
-      background-color: #f0f0f0; /* Light background for items */
-      padding: 1rem; /* Padding inside items */
-      border-radius: 4px; /* Rounded corners */
-    }
-  
-    .featured-content img {
-      width: 50px; /* Image size */
-      height: auto; /* Maintain aspect ratio */
-      margin-right: 0.5rem; /* Space between image and text */
-    }
-  
-    .featured-content h3 {
-      font-size: 18px; /* Smaller heading size for items */
-    }
-  }
-
 @media screen and (max-width: 37.5rem){
     .login {
         padding-top: 8rem;
         max-height: 100%;
     }
-
-    .form {
-        margin: 1rem;
-        padding: 2rem 3.5rem;
-    }
-    
+ 
     .form > h1 {
         text-align: center;
         margin: auto;
