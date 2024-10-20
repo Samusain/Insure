@@ -249,14 +249,14 @@
     
     .human-box {
         margin: 0;
-        padding: 3rem 0;
+        padding: 6rem 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
     
     .intro-img {
-        margin-top: 14.5rem;
+        margin-top: 15rem;
         width: 100%;
         z-index: 0;
     }
@@ -264,7 +264,7 @@
     .box {
         align-items: center;
         padding: 4rem 2rem;
-        margin-bottom: 3rem;
+        /* margin-bottom: 7rem; */
     }
 
     .box > h1 {
@@ -274,21 +274,14 @@
     }
     
     .box > p {
-        font-size: 20px;
+        font-size: 18px;
         max-width: 100%;
         text-align: center;
     }
     
     .box> a {
-        text-align: center;
         width: 9rem;
-        padding: 1rem;
-        background-color: var(--Dark-Violet-Gray);
-        border: 1.5px solid var(--Very-Light-Gray); 
-        letter-spacing: 1px;
-        font-size: 11px;
-        font-weight: 600;
-        color: var(--Very-Light-Gray);
+        padding: 0.8rem;
     }
 
     .pattern-right {
